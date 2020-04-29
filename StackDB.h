@@ -16,7 +16,7 @@ class StackDB
         //constructor
         StackDB();
         bool push(int Num);
-        int pop(int Num);
+        int pop();
         bool isEmpty();
 };
 

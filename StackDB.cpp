@@ -17,7 +17,7 @@ bool StackDB::push(int Num){
     }
 }
 
-int StackDB::pop(int Num){
+int StackDB::pop(){
     if (isEmpty())
     {
         cout << "stack underflow" << endl;
