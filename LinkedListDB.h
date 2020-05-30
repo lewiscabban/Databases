@@ -21,7 +21,8 @@ class LinkedListDB
         LinkedListDB();
         void push(int Num);
         int pop(int Num);
-        int find(int Num);
+        int get(int Num);
+        void set(int Num);
 };
 
 #endif

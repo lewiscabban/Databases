@@ -5,7 +5,6 @@ LinkedListDB::LinkedListDB(){
 }
 
 void LinkedListDB::push(int Num){
-    cout << "adding number" << endl;
     if (head == NULL)
     {
         Node* newnode = new Node();
@@ -27,7 +26,6 @@ void LinkedListDB::push(int Num){
 }
 
 int LinkedListDB::pop(int Num){
-    cout << "deleting number" << endl;
     Node* temp = head;
     Node* last;
     while (temp->next != NULL)
@@ -63,8 +61,7 @@ int LinkedListDB::pop(int Num){
     
 }
 
-int LinkedListDB::find(int Num){
-    cout << "finding number" << endl;
+int LinkedListDB::get(int Num){
     Node* temp = head;
     while (temp != NULL)
     {
@@ -83,6 +80,24 @@ int LinkedListDB::find(int Num){
     {
         return temp->value;
     }
-    
-    
+}
+
+void LinkedListDB::set(int Num){
+    Node* temp = head;
+    while (temp != NULL)
+    {
+        if (temp->value == Num)
+        {
+            break;
+        }
+        temp = temp->next;
+    }
+    if (temp == NULL)
+    {
+        cout << "number not in database" << endl;
+    }
+    else
+    {
+        temp->value = Num;
+    }
 }

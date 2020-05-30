@@ -35,7 +35,6 @@ int ArrayDB::pop(int Num){
         {
             break;
         }
-        
     }
     if (pos == -1)
     {
@@ -48,8 +47,58 @@ int ArrayDB::pop(int Num){
         {
             Array[i] = Array[i+1];
         }
-        Array[size-1] = -1;
-        size--;
+        Array[--size] = -1;
         return num;
+    }
+}
+
+int ArrayDB::get(int Num){
+    int pos = -1, num;
+    for (int i = 0; i < size; i++)
+    {
+        if (Array[i] == Num)
+        {
+            num = Array[i];
+            pos = i;
+            break;
+        }
+        else if (Array[i] == -1)
+        {
+            break;
+        }
+    }
+    if (pos == -1)
+    {
+        cout << "number not in array" << endl;
+        return -1;
+    }
+    else
+    {
+        return num;
+    }
+}
+
+void ArrayDB::set(int Num){
+    int pos = -1, num;
+    for (int i = 0; i < size; i++)
+    {
+        if (Array[i] == Num)
+        {
+            num = Array[i];
+            pos = i;
+            break;
+        }
+        else if (Array[i] == -1)
+        {
+            break;
+        }
+    }
+    if (pos == -1)
+    {
+        cout << "number not in array" << endl;
+    }
+    else
+    {
+        Array[pos] = Array[pos];
     }
 }

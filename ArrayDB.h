@@ -5,7 +5,7 @@
 
 using namespace std;
 
-#define MAX2 10
+#define MAX2 100000
 
 class ArrayDB
 {
@@ -17,6 +17,8 @@ class ArrayDB
         ArrayDB();
         bool push(int Num);
         int pop(int Num);
+        int get(int Num);
+        void set(int Num);
 };
 
 #endif
