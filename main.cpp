@@ -217,12 +217,13 @@ int main(int argc, char const *argv[])
     }
 
     outfile.close();
-    
+    */
     outfile.open("array_data_10000.csv");
     outfile << "push,get,set,pop,assend_push,assend_get,assend_set,assend_pop,desend_push,desend_get,desend_set,desend_pop" << endl;
 
     for (int j = 0; j < 20; j++)
     {
+        random_shuffle(input_10000.begin(),input_10000.end());
         //push,get,set,pop for random array
         auto t1 = chrono::high_resolution_clock::now();
         for (int i = 0; i < 10000; i++)
@@ -342,7 +343,7 @@ int main(int argc, char const *argv[])
     }
 
     outfile.close();
-
+/*
     outfile.open("array_data_5000.csv");
     outfile << "push,get,set,pop,assend_push,assend_get,assend_set,assend_pop,desend_push,desend_get,desend_set,desend_pop" << endl;
 
@@ -718,13 +719,13 @@ int main(int argc, char const *argv[])
     }
 
     outfile.close();
-
-    */
+*/
     outfile.open("LL_data_10000.csv");
     outfile << "push,get,set,pop,assend_push,assend_get,assend_set,assend_pop,desend_push,desend_get,desend_set,desend_pop" << endl;
 
     for (int j = 0; j < 20; j++)
     {
+        random_shuffle(input_10000.begin(),input_10000.end());
         //push,get,set,pop for random array
         auto t1 = chrono::high_resolution_clock::now();
         for (int i = 0; i < 10000; i++)
@@ -844,7 +845,7 @@ int main(int argc, char const *argv[])
     }
 
     outfile.close();
-
+/*
     outfile.open("LL_data_5000.csv");
     outfile << "push,get,set,pop,assend_push,assend_get,assend_set,assend_pop,desend_push,desend_get,desend_set,desend_pop" << endl;
 

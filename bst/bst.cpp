@@ -223,6 +223,7 @@ int main(int argc, char const *argv[])
 
     for (int j = 0; j < 20; j++)
     {
+        random_shuffle(input_10000.begin(),input_10000.end());
         //push,get,set,pop for random array
         auto t1 = chrono::high_resolution_clock::now();
         for (int i = 0; i < 10000; i++)
