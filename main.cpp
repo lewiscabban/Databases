@@ -217,7 +217,7 @@ int main(int argc, char const *argv[])
     }
 
     outfile.close();
-    */
+    
     outfile.open("array_data_10000.csv");
     outfile << "push,get,set,pop,assend_push,assend_get,assend_set,assend_pop,desend_push,desend_get,desend_set,desend_pop" << endl;
 
@@ -719,7 +719,7 @@ int main(int argc, char const *argv[])
 
     outfile.close();
 
-
+    */
     outfile.open("LL_data_10000.csv");
     outfile << "push,get,set,pop,assend_push,assend_get,assend_set,assend_pop,desend_push,desend_get,desend_set,desend_pop" << endl;
 

@@ -13,16 +13,14 @@ void LinkedListDB::push(int Num){
         head = newnode;
         return;
     }
-    
-    Node* temp = head;
-    while (temp->next != NULL)
+    else
     {
-        temp = temp->next;
+        Node* newnode = new Node();
+        newnode->value = Num;
+        newnode->next = head;
+        head = newnode;
+        return;
     }
-    Node* newnode = new Node();
-    newnode->value = Num;
-    newnode->next = NULL;
-    temp->next = newnode;
 }
 
 int LinkedListDB::pop(int Num){
